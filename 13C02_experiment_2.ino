@@ -33,7 +33,7 @@ void setup() {
   // 마진 이후 실이동폭을 180°로 간주 → 1deg당 us
   float us_per_deg = (float)(_POS_END - _POS_START) / 180.0f;
 
-  // ====== [구간 정의: 끝단에서 시작] ======
+  // 구간 정의: 끝단에서 시작
   POS_A_US = _POS_START;                                             // 시작(0°)
   POS_B_US = clamp_us(_POS_START + (int)(us_per_deg * MOVE_DEG + 0.5f)); // 0°→+90°
 
@@ -71,3 +71,4 @@ void loop() {
     phase_start_ms = now;
   }
 }
+
